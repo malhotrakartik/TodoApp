@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="195pt"
+    android:layout_height="330pt"
+    android:background="@color/colorPrimary"
+    tools:context=".ProfileFragment">
+
+    <ImageView
+        android:id="@+id/imgProfileImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profile"
+
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/txtProfileName"
+
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:drawableLeft="@drawable/profile"
+
+        android:text="hello"
+        android:textAlignment="center"
+
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgProfileImage"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/txtProfileNumber"
+        android:drawableLeft="@drawable/phone"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+
+        android:background="@drawable/shape"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtProfileName"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:id="@+id/txtProfileEmail"
+        android:textSize="17sp"
+
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:drawableLeft="@drawable/email"
+
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+
+        android:background="@drawable/shape"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtProfileNumber"
+        android:layout_marginTop="25dp"/>
+
+
+</RelativeLayout>

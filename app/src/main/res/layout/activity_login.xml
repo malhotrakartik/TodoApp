@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imgLogin"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/to_do"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogin"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="Login"/>
+
+    <EditText
+        android:id="@+id/txtEmailLogin"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="16dp"
+        android:hint="Email Id or Mobile Number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtLogin"/>
+    <EditText
+        android:id="@+id/txtPasswordLogin"
+        android:layout_width="380dp"
+        android:padding="16dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/password"
+
+        android:hint="Password"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtEmailLogin"/>
+    <TextView
+        android:id="@+id/txtForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:layout_below="@+id/txtPasswordLogin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+
+        android:id="@+id/btnLogin"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mybutton"
+        android:layout_below="@id/txtForgot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Login"
+        android:textSize="18sp"
+        android:textColor="#ffffff"/>
+
+
+
+    <TextView
+        android:id="@+id/txtSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip Login"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/txtDont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtSkip"
+        android:text="Don't have an account?">
+    </TextView>
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:layout_toRightOf="@+id/txtDont"
+        android:layout_below="@+id/txtSkip"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="4dp"
+        android:text="Register"></TextView>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
