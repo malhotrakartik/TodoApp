@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
 
     lateinit var spinner : Spinner
     lateinit var txtResult : TextView
+
     lateinit var etTask : EditText
     lateinit var btnAdd : Button
     lateinit var recyclerHome : RecyclerView
@@ -45,6 +46,7 @@ class HomeFragment : Fragment() {
 
         setHasOptionsMenu(true)
         recyclerHome = view.findViewById(R.id.recyclerHome)
+
         layoutManager = LinearLayoutManager(activity)
         spinner = view.findViewById(R.id.spinner)
         txtResult = view.findViewById(R.id.txtResult)

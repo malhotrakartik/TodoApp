@@ -1,9 +1,7 @@
 package com.example.todoapp.database
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import android.os.FileObserver.DELETE
+import androidx.room.*
 
 @Dao
 interface ListDao {
@@ -19,6 +17,9 @@ interface ListDao {
 
     @Query("DELETE FROM Lists WHERE listId=:listId")
     fun deleteListById(listId : String)
+
+    @Query("UPDATE Lists SET list_content =:content WHERE listId = :list_id")
+   fun updateList(list_id: String,content:String)
 
 
     @Query("SELECT * FROM Lists WHERE listId=:list_id")

@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="100dp"
 
     android:background="#ffffff"
     android:layout_margin="5dp"
@@ -15,8 +15,12 @@
     android:weightSum="6"
     android:layout_height="match_parent">
 
+
+
     <TextView
         android:id="@+id/txtList"
+        android:editable="true"
+        android:focusableInTouchMode="true"
         android:text="First Task"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -25,6 +29,21 @@
         android:layout_width="0dp"
         android:layout_weight="4.8"
         android:layout_height="wrap_content" />
+
+<!--    <Spinner-->
+<!--        android:id="@+id/btnSpinner"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_weight="1"-->
+
+
+<!--        android:layout_height="40dp"-->
+
+
+<!--        android:background="@android:drawable/btn_dropdown"-->
+
+
+<!--        android:layout_marginTop="28dp"-->
+<!--        android:spinnerMode="dropdown"/>-->
     <TextView
         android:id="@+id/txtPriority"
         android:text="First Task"
@@ -32,14 +51,40 @@
         android:layout_width="0dp"
         android:layout_weight="0"
         android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnDone"
+    <TextView
+        android:id="@+id/txtResult"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.2"
-        android:layout_marginTop="13dp"
-        android:text="Done"/>
+        android:layout_weight="0"
+        android:layout_height="0dp"
+        />
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:text="Done"/>
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDone"
+
+
+            android:text="Edit &amp; Save"/>
+    </RelativeLayout>
+
+
+
+
+
+
 
 
 
