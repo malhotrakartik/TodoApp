@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var appToolbar : androidx.appcompat.widget.Toolbar
     lateinit var frameLayout: FrameLayout
     lateinit var navigationView : NavigationView
-    lateinit var btnLogOut : Button
+
     private lateinit var auth: FirebaseAuth
     var previousMenuItem: MenuItem? = null
 
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         navigationView = findViewById(R.id.navigationView)
 
 
-//        btnLogOut = findViewById(R.id.btnLogOut)
+
         auth = FirebaseAuth.getInstance()
 //        btnLogOut.setOnClickListener {
 //            FirebaseAuth.getInstance().signOut()

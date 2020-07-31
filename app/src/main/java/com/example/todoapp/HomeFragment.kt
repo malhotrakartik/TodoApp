@@ -1,5 +1,6 @@
 package com.example.todoapp
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -145,14 +146,45 @@ class HomeFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item?.itemId
         if (id == R.id.logout) {
-            FirebaseAuth.getInstance().signOut()
-            activity?.finish()
-            sharedPreferences.edit().clear().apply()
+
+            val dialog = AlertDialog.Builder(context)
+//                    dialog.setTitle("success")
+            dialog.setMessage("Are you sure you want to logout,Your Todo list will be Removed")
+            dialog.setPositiveButton("YES"){
+                    text,listener ->
+
+                FirebaseAuth.getInstance().signOut()
+                activity?.finish()
+                sharedPreferences.edit().clear().apply()
+                for(list in dbList) {
+                    DBAsyncTask(activity as Context,list,3
+
+                    ).execute()
+                }
 
 
 
-            val intent = Intent(context, LoginActivity::class.java)
-            startActivity(intent)
+
+
+
+                val intent = Intent(context, LoginActivity::class.java)
+                startActivity(intent)
+//                        Toast.makeText(this@MainActivity ,"hello" , Toast.LENGTH_LONG).show()
+
+
+
+
+
+            }
+            dialog.setNegativeButton("Cancel"){
+                    text,listener ->
+                println("ok")
+
+
+            }
+            dialog.create()
+            dialog.show()
+
 
 
         }
