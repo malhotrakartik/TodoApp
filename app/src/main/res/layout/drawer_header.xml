@@ -2,40 +2,34 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="140dp"
+    android:weightSum="6"
     android:background="@color/colorPrimary">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
+        android:layout_weight="1.5"
         android:layout_marginLeft="25dp"
-        android:src="@drawable/hamara2jk"/>
+        android:src="@drawable/to_do"/>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginLeft="35dp">
+
 
         <TextView
             android:id="@+id/name"
+            android:layout_weight="4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="To-Do App"
             android:textColor="#ffffff"
+            android:layout_marginTop="45dp"
 
 
             android:textSize="35sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
-            android:textSize="24dp"
-            android:textColor="#ffffff"
-            android:text="Edit Profile"/>
 
 
-    </RelativeLayout>
+
+
 
 
 

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var frameLayout: FrameLayout
     lateinit var navigationView : NavigationView
 
+
     private lateinit var auth: FirebaseAuth
     var previousMenuItem: MenuItem? = null
 
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         appToolbar = findViewById(R.id.appToolbar)
         frameLayout = findViewById(R.id.frameLayout)
         navigationView = findViewById(R.id.navigationView)
+
 
 
 
@@ -112,10 +115,22 @@ private fun setUpToolBar(){
         .commit()
     drawerLayout.closeDrawers()
 
-    supportActionBar?.title = "Home"
+    supportActionBar?.title = "To-Do List"
     navigationView.setCheckedItem(R.id.home)
 
 }
+
+    override fun onBackPressed() {
+        val frag = supportFragmentManager.findFragmentById(R.id.frameLayout)
+        when(frag) {
+
+            !is HomeFragment -> openHome()
+
+            else -> super.onBackPressed()
+        }
+
+
+    }
 
 override fun onOptionsItemSelected(item: MenuItem): Boolean {
 

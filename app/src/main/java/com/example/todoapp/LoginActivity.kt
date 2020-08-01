@@ -94,8 +94,8 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
 
-            Toast.makeText(baseContext, "Login Done.",
-                Toast.LENGTH_SHORT).show()
+//            Toast.makeText(baseContext, "Login Done.",
+//                Toast.LENGTH_SHORT).show()
 
         }else{
             Toast.makeText(baseContext, "Login failed.",
